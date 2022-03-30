@@ -25,6 +25,7 @@ jobs:
       - name: Build and Run Test
         env:
           DATABASE_URL: postgres://postgres:@localhost:5432/test
+          POSTGRES_PASSWORD: root
           RAILS_ENV: test
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
         run: |
