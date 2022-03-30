@@ -24,9 +24,9 @@ jobs:
           cmd: install
       - name: Build and Run Test
         env:
-          DATABASE_URL: postgres://postgres:@localhost:5432/test
+          POSTGRES_DB: postgres        
           POSTGRES_PASSWORD: postgres
-          RAILS_ENV: test
+          POSTGRES_USER: postgres
           RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
         run: |
           sudo apt-get -yqq install libpq-dev
