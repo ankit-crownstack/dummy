@@ -7,6 +7,6 @@ class CreateProducts < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
-    add_money :products, :price, currency: { present: true }
+    add_monetize :products, :price, currency: { present: true }
   end
 end
